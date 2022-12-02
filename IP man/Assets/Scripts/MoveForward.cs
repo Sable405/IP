@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepeatBackground : MonoBehaviour
+public class MoveForward : MonoBehaviour
 {
-    public float _yRange = -10;
-    
+    public float moveSpeed = 5;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,9 +15,6 @@ public class RepeatBackground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y < _yRange)
-        {
-            transform.position = new Vector2(0.03f, 10);
-        }
+        transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
     }
 }

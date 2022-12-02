@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public float xRange = 8;
 
-    //public GameObject projectilePrefab;
+    public GameObject projectilePrefab;
     
 
     private float _horizontalInput;
@@ -24,9 +24,9 @@ public class PlayerController : MonoBehaviour
     {
         PlayerMovement();
 
-       // if(Input.GetKeyDown(KeyCode.Space))
+       if(Input.GetKeyDown(KeyCode.Space))
         {
-         //   Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
     void PlayerMovement()
