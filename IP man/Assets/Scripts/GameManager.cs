@@ -13,44 +13,47 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI GameOverText;
 
-        public Button RestartButton;
+    public Button RestartButton;
 
-        public Button StartButton;
+    public Button StartButton;
 
-        public GameObject objectToSpawn; 
+    public GameObject objectToSpawn; 
+
+    public GameObject Player;
         
     // Start is called before the first frame update
     void Start()
     {
         IsGameActive = false;
           //GameTitleText.gameObject.SetActive(false);
-        StartButton.gameObject.SetActive(false);
-        StartScene.gameObject.SetActive(false);
+        StartButton.gameObject.SetActive(true);
+        StartScene.gameObject.SetActive(true);
         
     }
-    public void NIG()
+    public void ST()
     {
       IsGameActive = true;
+      Instantiate(objectToSpawn);
+    StartButton.gameObject.SetActive(false);
+    StartScene.gameObject.SetActive(false);
      
     }
     // Update is called once per frame
     void Update()
     {
-    if (IsGameActive = true) 
+    if (IsGameActive == false) 
     {
-    Instantiate(objectToSpawn);
+        
     }
      
     }
      public void GameOver()
     {
-        IsGameActive = false;
-        GameOverText.gameObject.SetActive(true);
-        RestartButton.gameObject.SetActive(true);
+       GameOverText.gameObject.SetActive(true);
+       RestartButton.gameObject.SetActive(true);
     }
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
 }
