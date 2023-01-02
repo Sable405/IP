@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     public GameObject objectToSpawn; 
 
     public GameObject Player;
+
+    public GameObject UITimer;
+    public Button Objective;
         
     // Start is called before the first frame update
     void Start()
@@ -28,7 +31,8 @@ public class GameManager : MonoBehaviour
           //GameTitleText.gameObject.SetActive(false);
         StartButton.gameObject.SetActive(true);
         StartScene.gameObject.SetActive(true);
-        
+        UITimer.gameObject.SetActive(false);
+         Objective.gameObject.SetActive(true);
     }
     public void ST()
     {
@@ -36,7 +40,7 @@ public class GameManager : MonoBehaviour
       Instantiate(objectToSpawn);
     StartButton.gameObject.SetActive(false);
     StartScene.gameObject.SetActive(false);
-     
+     Objective.gameObject.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -56,4 +60,13 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    public void StartTimer()
+    {
+      UITimer.gameObject.SetActive(true);
+    }
+    public void StoryText()
+    {
+        SceneManager.LoadScene(1);
+    }
+    
 }
