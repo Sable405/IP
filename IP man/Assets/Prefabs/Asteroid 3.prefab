@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb24e685fbbc58c4db8ac42533921588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
+  moveSpeed: 3
 --- !u!114 &-1157042146226606012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d434b7f6f304a87428117e71b33d3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crashSounds: {fileID: 0}
 --- !u!61 &2016174128311336532
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -168,7 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d434b7f6f304a87428117e71b33d3336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crashSounds: {fileID: 8300000, guid: 9b8995eba5afa63458db9c14edcf24be, type: 3}
 --- !u!82 &3046768559447196003
 AudioSource:
   m_ObjectHideFlags: 0
