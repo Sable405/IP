@@ -23,7 +23,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject UITimer;
     public Button Objective;
-        
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
         StartScene.gameObject.SetActive(true);
         UITimer.gameObject.SetActive(false);
          Objective.gameObject.SetActive(true);
+        
     }
     public void ST()
     {

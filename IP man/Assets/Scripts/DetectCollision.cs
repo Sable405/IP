@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 public class DetectCollision : MonoBehaviour
 
 {
+
+
+
  // private AudioSource _playerAudio;
   //public AudioClip crashSounds;
    //void Start()
@@ -19,6 +22,8 @@ public class DetectCollision : MonoBehaviour
         {
             Destroy(other.gameObject);  
             Destroy(this.gameObject);  
+           
+
           // _playerAudio.PlayOneShot(crashSounds, 1.0f);
         }
 }
